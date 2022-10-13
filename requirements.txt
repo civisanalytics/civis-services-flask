@@ -1,0 +1,5 @@
+flask~=2.2
+gunicorn~=20.1
+civis~=1.16
+
+# Add any additional packages here
