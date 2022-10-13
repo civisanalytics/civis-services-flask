@@ -16,10 +16,10 @@ First, let's run this Github repo (the one you are reading right now) as a servi
 
 1. Go to https://platform.civisanalytics.com/spa/#/services/new to create a new Service.
    1. Find the "Git Connection" fields.
-      1. Repository: `https://github.com/civisanalytics/civis-services-demo.git`
+      1. Repository: `https://github.com/civisanalytics/civis-services-flask-demo.git`
       1. Branch: `main`
    1. Find the "Docker" fields.
-      1. Image name: `civisanalytics/civis-services-demo`
+      1. Image name: `civisanalytics/civis-services-flask-demo`
     2. Leave all other fields blank or with their default values.
 1. Click `Start Deployment` to run the service.
 1. Keep track of this service so you can find it later.  You can bookmark it, give it a distinctive name so you can find it in the Platform search bar, or add it to a project.
