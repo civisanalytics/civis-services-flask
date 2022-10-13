@@ -1,0 +1,17 @@
+version: '3'
+services:
+  web:
+    build:
+      context: .
+    ports:
+      - "${CIVIS_SERVICE_PORT:-3838}:${CIVIS_SERVICE_PORT:-3838}"
+    volumes:
+      - .:/app
+    environment:
+      APP_DIR: /app
+      CIVIS_SERVICE_PORT: ${CIVIS_SERVICE_PORT:-3838}
+      CIVIS_API_KEY: ${CIVIS_API_KEY}
+
+      # Custom environment variables to pass to the service
+      # Any secrets should be provided in a .env file
+      FLASK_DEMO_FAVORITE_FRUIT_PASSWORD: ${FLASK_DEMO_FAVORITE_FRUIT_PASSWORD}
