@@ -16,14 +16,14 @@ First, let's run this Github repo (the one you are reading right now) as a servi
 
 1. Go to https://platform.civisanalytics.com/spa/#/services/new to create a new Service.
    1. Find the "Git Connection" fields.
-      1. Repository: `https://github.com/civisanalytics/civis-services-flask-demo.git`
+      1. Repository: `https://github.com/civisanalytics/civis-services-flask.git`
       1. Branch: `main`
    1. Find the "Docker" fields.
-      1. Image name: `civisanalytics/civis-services-flask-demo`
+      1. Image name: `civisanalytics/civis-services-flask`
     2. Leave all other fields blank or with their default values.
 1. Click `Start Deployment` to run the service.
 1. Keep track of this service so you can find it later.  You can bookmark it, give it a distinctive name so you can find it in the Platform search bar, or add it to a project.
-      
+
 Once the service has started up, you should see a "Your service is running!" message in the preview window.  You can also view the logs for the service by clicking [`Deployment History`](https://civis.zendesk.com/hc/en-us/articles/360001335031-Civis-Service-Deployment#DeploymentHistory).
 
 Click `Stop Deployment` to shut down the service and stop using compute resources.  If you forget to shut down the service, it will sleep automatically after one hour of inactivity.
@@ -114,7 +114,7 @@ This example application does not attempt to set up a fully featured front end. 
 
 You can use React, Angular, or any other Javascript framework in your service. Just make sure that your root API endpoint (/) returns the initial landing page for your app.  If not, Platform will consider your app to be down and continuously attempt to restart it.
 
-**NOTE**: Browsers will often cache HTML and Javascript files by name. Therefore, we recommend having the Javascript file(s) named using a commit hash or similar to prevent caching. 
+**NOTE**: Browsers will often cache HTML and Javascript files by name. Therefore, we recommend having the Javascript file(s) named using a commit hash or similar to prevent caching.
 
 
 ### Accessing your service from inside Civis Platform
@@ -159,7 +159,7 @@ In the example below, we will hit the API of a Platform service from a Platform 
    ```
    'The ID of this service is: ...'
    ```
-   
+
    The fruits API endpoint:
    ```
    service_request(SERVICE_ID, "/api/fruits/").json()
