@@ -1,4 +1,4 @@
-FROM python:3.10-slim-buster
+FROM python:3.12-slim
 LABEL maintainer=tech@civisanalytics.com
 
 ENV APP_CONFIG_FILE=/app/civis_app/config/production.py
