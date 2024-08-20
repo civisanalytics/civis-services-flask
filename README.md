@@ -93,6 +93,8 @@ You should again see that the fruit you selected is marked as a favorite!  If no
 
 You should now be comfortable running the service locally and in Civis Platform.  To make further changes, fork this Github repo into your own account and create a new service in Civis connected to your forked repo.  As you push changes to Github, you will see them reflected in the service when you stop and restart it.
 
+If you want to host multiple applications in a single repository, you can set the Git Path Directory on the service to select between them. The entrypoint of this docker image will `cd` to that directory and attempt to run `start_service.sh`.  For other custom configurations, you may want to build a custom docker image.
+
 ## Additional Notes
 
 ### Updating your service

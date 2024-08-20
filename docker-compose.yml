@@ -1,4 +1,3 @@
-version: '3'
 services:
   web:
     build:
@@ -9,8 +8,10 @@ services:
       - .:/app
     environment:
       APP_DIR: /app
+      REPO_APP_DIR:
       CIVIS_SERVICE_PORT: ${CIVIS_SERVICE_PORT:-3838}
       CIVIS_API_KEY: ${CIVIS_API_KEY}
+      APP_CONFIG_FILE: config/production.py
 
       # Custom environment variables to pass to the service
       # Any secrets should be provided in a .env file
