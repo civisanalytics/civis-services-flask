@@ -9,7 +9,7 @@ from flask.logging import default_handler
 def create_app():
     # We will service static files from the dist folder
     # Assumes the frontend is written in React and bundled by webpack
-    _template_folder = "../dist"
+    _template_folder = "./dist"
     app = Flask(
         __name__,
         template_folder=_template_folder,
@@ -20,7 +20,7 @@ def create_app():
     app.url_map.strict_slashes = False
 
     # Load the file specified by the APP_CONFIG_FILE environment variable
-    # This should be civis_app/config/production.py
+    # This should be ./config/production.py
     # and is set in the Dockerfile
     app.config.from_envvar("APP_CONFIG_FILE")
 
